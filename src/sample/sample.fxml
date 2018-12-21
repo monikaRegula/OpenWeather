@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="784.0" style="-fx-background-color: fuschia;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="73.0" layoutY="1.0" text="City" />
+      <TextField fx:id="txtCity" layoutX="10.0" layoutY="19.0" />
+      <Label layoutX="201.0" layoutY="1.0" text="Time step" />
+      <Button fx:id="btnStart" layoutX="281.0" layoutY="19.0" mnemonicParsing="false" onAction="#startPressed" text="Start" />
+      <TextField fx:id="txtInterval" layoutX="201.0" layoutY="19.0" prefHeight="25.0" prefWidth="52.0" />
+      <Button fx:id="btnPause" layoutX="334.0" layoutY="19.0" mnemonicParsing="false" onAction="#btnPausePressed" text="Pause" />
+      <Button fx:id="btnUnpasue" layoutX="398.0" layoutY="19.0" mnemonicParsing="false" onAction="#btnUnpausePressed" text="Unpause" />
+      <TableView fx:id="tabview" layoutX="436.0" layoutY="127.0" prefHeight="328.0" prefWidth="362.0">
+        <columns>
+          <TableColumn fx:id="TableColumnLp" prefWidth="35.0" text="Lp." />
+          <TableColumn fx:id="TableColumnTime" prefWidth="86.0" text="Time" />
+            <TableColumn fx:id="TableColumnTemp" prefWidth="87.0" text="Temperature" />
+            <TableColumn fx:id="TableColumnHum" prefWidth="75.0" text="Humidity" />
+            <TableColumn fx:id="TableColumnPress" prefWidth="78.0" text="Pressure" />
+        </columns>
+      </TableView>
+      <ScatterChart fx:id="chart1" layoutX="7.0" layoutY="92.0" prefHeight="314.0" prefWidth="417.0">
+        <xAxis>
+          <NumberAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </ScatterChart>
+      <ChoiceBox fx:id="choiceOfCHart" layoutX="95.0" layoutY="55.0" prefWidth="150.0" />
+      <Label layoutX="544.0" layoutY="1.0" text="File name" />
+      <TextField fx:id="txtFileName" layoutX="509.0" layoutY="19.0" prefHeight="25.0" prefWidth="122.0" />
+      <Button fx:id="btnStopandSave" layoutX="678.0" layoutY="19.0" mnemonicParsing="false" onAction="#btnStopandSavePressed" text="Stop and Save" />
+      <Label layoutX="348.0" layoutY="491.0" text="Number of measurements" />
+      <Label layoutX="33.0" layoutY="414.0" text="Standard Deviation" />
+      <Label layoutX="15.0" layoutY="511.0" text="Press" />
+      <Label layoutX="16.0" layoutY="477.0" text="Hum" />
+      <Label layoutX="14.0" layoutY="438.0" text="Temp" />
+      <TextField fx:id="txtSDtemp" layoutX="56.0" layoutY="439.0" prefHeight="25.0" prefWidth="139.0" />
+      <TextField fx:id="txtSDhum" layoutX="56.0" layoutY="473.0" prefHeight="25.0" prefWidth="139.0" />
+      <TextField fx:id="txtSDpress" layoutX="56.0" layoutY="507.0" prefHeight="25.0" prefWidth="139.0" />
+      <Label layoutX="245.0" layoutY="414.0" text="Max values" />
+      <Label layoutX="201.0" layoutY="443.0" text="Temp" />
+      <Label layoutX="203.0" layoutY="477.0" text="Hum" />
+      <Label layoutX="202.0" layoutY="511.0" text="Press" />
+      <TextField fx:id="txtMaxTemp" layoutX="239.0" layoutY="443.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txtMaxHum" layoutX="239.0" layoutY="473.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txtMaxPress" layoutX="239.0" layoutY="499.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txtNumber" layoutX="500.0" layoutY="486.0" prefHeight="25.0" prefWidth="70.0" />
+      <Text fx:id="txtIntervalException" layoutX="170.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="138.57422304153442" />
+      <Button fx:id="btnReadFile" layoutX="688.0" layoutY="67.0" mnemonicParsing="false" onAction="#btnReadFilePressed" text="READ" />
+      <Text fx:id="txtCityException" layoutX="9.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="150.0000044107437" />
+      <TextField fx:id="txtFileName1" layoutX="544.0" layoutY="68.0" prefHeight="25.0" prefWidth="122.0" />
+   </children>
+</Pane>
